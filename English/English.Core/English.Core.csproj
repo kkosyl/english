@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{04885C11-5855-4294-946B-A20145996488}</ProjectGuid>
+    <ProjectGuid>{41F89279-0ACC-4520-80D5-D74A9C8B23F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>English.Dal</RootNamespace>
-    <AssemblyName>English.Dal</AssemblyName>
+    <RootNamespace>English.Core</RootNamespace>
+    <AssemblyName>English.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,36 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbFactory.cs" />
-    <Compile Include="IDbFactory.cs" />
-    <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="Migrations\201509291000513_Init.cs" />
-    <Compile Include="Migrations\201509291000513_Init.Designer.cs">
-      <DependentUpon>201509291000513_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\EnglishDbContext.cs" />
-    <Compile Include="Model\Excercise.cs" />
-    <Compile Include="Model\ExcerciseType.cs" />
-    <Compile Include="Model\Introduction.cs" />
-    <Compile Include="Model\Post.cs" />
-    <Compile Include="Model\PostReply.cs" />
-    <Compile Include="Model\PostReplyUserVote.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserExercise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\Repository.cs" />
-    <Compile Include="UnitOfWork.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509291000513_Init.resx">
-      <DependentUpon>201509291000513_Init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

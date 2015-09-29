@@ -41,6 +41,24 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\English.Core\English.Core.csproj">
+      <Project>{41f89279-0acc-4520-80d5-d74a9c8b23f0}</Project>
+      <Name>English.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\English.Dal\English.Dal.csproj">
+      <Project>{04885c11-5855-4294-946b-a20145996488}</Project>
+      <Name>English.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\English.GUI\English.GUI.csproj">
+      <Project>{27bea96a-ff20-4944-bdc8-38334f3a6bc3}</Project>
+      <Name>English.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\English.Service\English.Service.csproj">
+      <Project>{8c67c0eb-3c2c-481d-b9b7-2b47543f7b29}</Project>
+      <Name>English.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

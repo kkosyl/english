@@ -41,6 +41,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\English.Core\English.Core.csproj">
+      <Project>{41f89279-0acc-4520-80d5-d74a9c8b23f0}</Project>
+      <Name>English.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\English.Dal\English.Dal.csproj">
+      <Project>{04885c11-5855-4294-946b-a20145996488}</Project>
+      <Name>English.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
