@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace English.Dal.Model
 {
-    public class Excercise
+    public class Exercise
     {
         [Key]
         public int Id { get; set; }
 
         [ForeignKey("Type")]
-        public string ExcerciseType { get; set; }
+        public string ExerciseType { get; set; }
 
         public string Content { get; set; }
         public string Answer { get; set; }
 
-        public virtual ExcerciseType Type { get; set; }
-        public virtual ICollection<UserExercise> UserExcercises { get; set; }
+        public virtual ExerciseType Type { get; set; }
+        public virtual ICollection<UserExercise> UserExercises { get; set; }
     }
 }

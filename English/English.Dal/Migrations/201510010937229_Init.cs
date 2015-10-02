@@ -8,20 +8,20 @@ namespace English.Dal.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Excercise",
+                "dbo.Exercise",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        ExcerciseType = c.String(maxLength: 128),
+                        ExerciseType = c.String(maxLength: 128),
                         Content = c.String(),
                         Answer = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ExcerciseType", t => t.ExcerciseType)
-                .Index(t => t.ExcerciseType);
+                .ForeignKey("dbo.ExerciseType", t => t.ExerciseType)
+                .Index(t => t.ExerciseType);
             
             CreateTable(
-                "dbo.ExcerciseType",
+                "dbo.ExerciseType",
                 c => new
                     {
                         Type = c.String(nullable: false, maxLength: 128),
@@ -39,7 +39,7 @@ namespace English.Dal.Migrations
                         Content = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.ExcerciseType", t => t.ExerciseType)
+                .ForeignKey("dbo.ExerciseType", t => t.ExerciseType)
                 .Index(t => t.ExerciseType);
             
             CreateTable(
@@ -47,14 +47,13 @@ namespace English.Dal.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        ExcerciseId = c.Int(nullable: false),
+                        ExerciseId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
-                        IsDone = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Excercise", t => t.ExcerciseId, cascadeDelete: true)
+                .ForeignKey("dbo.Exercise", t => t.ExerciseId, cascadeDelete: true)
                 .ForeignKey("dbo.User", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.ExcerciseId)
+                .Index(t => t.ExerciseId)
                 .Index(t => t.UserId);
             
             CreateTable(
@@ -78,8 +77,8 @@ namespace English.Dal.Migrations
                         PostId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
                         Content = c.String(),
-                        IsUseful = c.Boolean(nullable: false),
                         ReplyDate = c.DateTime(nullable: false),
+                        Useful = c.Int(nullable: false),
                         User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -96,6 +95,7 @@ namespace English.Dal.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         UserId = c.Int(nullable: false),
+                        Topic = c.String(),
                         Content = c.String(),
                         DatePosted = c.DateTime(nullable: false),
                         HasNewContent = c.Boolean(nullable: false),
@@ -114,7 +114,6 @@ namespace English.Dal.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         PostReplyId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
-                        HasVoted = c.Boolean(nullable: false),
                         User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -138,9 +137,9 @@ namespace English.Dal.Migrations
             DropForeignKey("dbo.PostReplyUserVote", "PostReplyId", "dbo.PostReply");
             DropForeignKey("dbo.PostReply", "PostId", "dbo.Post");
             DropForeignKey("dbo.Post", "UserId", "dbo.User");
-            DropForeignKey("dbo.UserExercise", "ExcerciseId", "dbo.Excercise");
-            DropForeignKey("dbo.Excercise", "ExcerciseType", "dbo.ExcerciseType");
-            DropForeignKey("dbo.Introduction", "ExerciseType", "dbo.ExcerciseType");
+            DropForeignKey("dbo.UserExercise", "ExerciseId", "dbo.Exercise");
+            DropForeignKey("dbo.Exercise", "ExerciseType", "dbo.ExerciseType");
+            DropForeignKey("dbo.Introduction", "ExerciseType", "dbo.ExerciseType");
             DropIndex("dbo.PostReplyUserVote", new[] { "User_Id" });
             DropIndex("dbo.PostReplyUserVote", new[] { "UserId" });
             DropIndex("dbo.PostReplyUserVote", new[] { "PostReplyId" });
@@ -150,17 +149,17 @@ namespace English.Dal.Migrations
             DropIndex("dbo.PostReply", new[] { "UserId" });
             DropIndex("dbo.PostReply", new[] { "PostId" });
             DropIndex("dbo.UserExercise", new[] { "UserId" });
-            DropIndex("dbo.UserExercise", new[] { "ExcerciseId" });
+            DropIndex("dbo.UserExercise", new[] { "ExerciseId" });
             DropIndex("dbo.Introduction", new[] { "ExerciseType" });
-            DropIndex("dbo.Excercise", new[] { "ExcerciseType" });
+            DropIndex("dbo.Exercise", new[] { "ExerciseType" });
             DropTable("dbo.PostReplyUserVote");
             DropTable("dbo.Post");
             DropTable("dbo.PostReply");
             DropTable("dbo.User");
             DropTable("dbo.UserExercise");
             DropTable("dbo.Introduction");
-            DropTable("dbo.ExcerciseType");
-            DropTable("dbo.Excercise");
+            DropTable("dbo.ExerciseType");
+            DropTable("dbo.Exercise");
         }
     }
 }

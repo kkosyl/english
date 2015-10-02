@@ -15,7 +15,7 @@ namespace English.Dal.Model
         public DateTime RegisterDate { get; set; }
         public DateTime LastLoginDate { get; set; }
 
-        public virtual ICollection<UserExercise> UserExcercises { get; set; }
+        public virtual ICollection<UserExercise> UserExercises { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
         public virtual ICollection<PostReply> PostReplies { get; set; }
         public virtual ICollection<PostReplyUserVote> PostReplyUserVotes { get; set; }

@@ -51,14 +51,14 @@
     <Compile Include="DbFactory.cs" />
     <Compile Include="IDbFactory.cs" />
     <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="Migrations\201509291000513_Init.cs" />
-    <Compile Include="Migrations\201509291000513_Init.Designer.cs">
-      <DependentUpon>201509291000513_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201510010937229_Init.cs" />
+    <Compile Include="Migrations\201510010937229_Init.Designer.cs">
+      <DependentUpon>201510010937229_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\EnglishDbContext.cs" />
-    <Compile Include="Model\Excercise.cs" />
-    <Compile Include="Model\ExcerciseType.cs" />
+    <Compile Include="Model\Exercise.cs" />
+    <Compile Include="Model\ExerciseType.cs" />
     <Compile Include="Model\Introduction.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\PostReply.cs" />
@@ -75,8 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509291000513_Init.resx">
-      <DependentUpon>201509291000513_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510010937229_Init.resx">
+      <DependentUpon>201510010937229_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

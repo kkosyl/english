@@ -20,8 +20,8 @@ namespace English.Dal.Model
         public int UserId { get; set; }
 
         public string Content { get; set; }
-        public bool IsUseful { get; set; }
         public DateTime ReplyDate { get; set; }
+        public int Useful { get; set; }
 
         public virtual User User { get; set; }
         public virtual Post Post { get; set; }

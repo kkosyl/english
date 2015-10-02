@@ -39,8 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\GET\ExerciseDto.cs" />
+    <Compile Include="DTO\GET\ExerciseTypeDto.cs" />
+    <Compile Include="DTO\GET\IntroductionContentDto.cs" />
+    <Compile Include="DTO\GET\IntroductionDto.cs" />
+    <Compile Include="DTO\GET\PostDetailsDto.cs" />
+    <Compile Include="DTO\GET\PostDto.cs" />
+    <Compile Include="DTO\GET\PostReplyDto.cs" />
+    <Compile Include="DTO\GET\ExercisesSetDto.cs" />
+    <Compile Include="DTO\GET\UserDetailsDto.cs" />
+    <Compile Include="DTO\POST\NewReplyDto.cs" />
+    <Compile Include="DTO\POST\NewTopicDto.cs" />
+    <Compile Include="DTO\POST\RegisterUserDto.cs" />
+    <Compile Include="DTO\POST\VoteDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

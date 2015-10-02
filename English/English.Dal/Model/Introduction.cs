@@ -18,6 +18,6 @@ namespace English.Dal.Model
 
         public string Content { get; set; }
 
-        public virtual ExcerciseType Type { get; set; }
+        public virtual ExerciseType Type { get; set; }
     }
 }

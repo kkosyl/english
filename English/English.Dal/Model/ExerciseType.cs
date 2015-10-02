@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace English.Dal.Model
 {
-    public class ExcerciseType
+    public class ExerciseType
     {
         [Key]
         public string Type { get; set; }
@@ -17,6 +17,6 @@ namespace English.Dal.Model
 
 
         public virtual ICollection<Introduction> Introductions { get; set; }
-        public virtual ICollection<Excercise> Excercises { get; set; }
+        public virtual ICollection<Exercise> Exercises { get; set; }
     }
 }

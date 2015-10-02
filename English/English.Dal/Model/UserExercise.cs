@@ -13,15 +13,13 @@ namespace English.Dal.Model
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("Excercise")]
-        public int ExcerciseId { get; set; }
+        [ForeignKey("Exercise")]
+        public int ExerciseId { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }
 
-        public bool IsDone { get; set; }
-
         public virtual User User { get; set; }
-        public virtual Excercise Excercise { get; set; }
+        public virtual Exercise Exercise { get; set; }
     }
 }

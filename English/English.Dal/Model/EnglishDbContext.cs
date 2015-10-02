@@ -16,8 +16,8 @@ namespace English.Dal.Model
             Database.SetInitializer(new EnglishDbInitializer());
         }
 
-        public virtual DbSet<Excercise> Excercises { get; set; }
-        public virtual DbSet<ExcerciseType> ExcerciseTypes { get; set; }
+        public virtual DbSet<Exercise> Exercises { get; set; }
+        public virtual DbSet<ExerciseType> ExerciseTypes { get; set; }
         public virtual DbSet<Introduction> Introductions { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<PostReply> PostReplies { get; set; }
